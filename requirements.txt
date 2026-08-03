@@ -1,0 +1,17 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+sqlalchemy==2.0.36
+psycopg[binary]==3.2.3
+alembic==1.14.0
+docker==7.1.0
+langgraph>=0.2.60,<0.3.0
+langchain-core>=0.3.27,<0.4.0
+langchain-ollama>=0.2.2,<0.3.0
+redis==5.2.1
+python-dotenv==1.0.1
+httpx==0.28.1
+
+pytest==8.3.4
+pytest-mock==3.14.0
