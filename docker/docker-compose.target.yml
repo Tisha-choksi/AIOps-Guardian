@@ -1,0 +1,22 @@
+services:
+  sample-app:
+    build: ./sample-app
+    container_name: sample-app
+    environment:
+      DATABASE_URL: postgresql://sample:sample@sample-db:5432/sample
+      CRASH_ON_START: "false"
+    ports:
+      - "8080:5000"
+    depends_on:
+      - sample-db
+    restart: unless-stopped
+
+  sample-db:
+    image: postgres:16-alpine
+    container_name: sample-db
+    environment:
+      POSTGRES_USER: sample
+      POSTGRES_PASSWORD: sample
+      POSTGRES_DB: sample
+    ports:
+      - "5433:5432"
