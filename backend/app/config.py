@@ -10,6 +10,12 @@ class Settings(BaseSettings):
 
     api_key: str = "dev-local-key"
 
+    jwt_secret: str = "dev-local-jwt-secret-change-me"
+    jwt_algorithm: str = "HS256"
+    jwt_expire_minutes: int = 60 * 24
+
+    cors_allowed_origins: list[str] = ["http://localhost:3000"]
+
     log_level: str = "INFO"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
